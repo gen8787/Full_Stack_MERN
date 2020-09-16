@@ -22,18 +22,18 @@ const AllProducts = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Title</th>
                         <th>Price</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                 {
                     allProducts.map((prod, i) => 
                         <tr key={i}>
-                            <td>{prod._id}</td>
-                            <td>{prod.title}</td>
+                            <td><Link to={`/${prod._id}`}>{prod.title}</Link></td>
                             <td>{prod.price}</td>
+                            <td></td>
                         </tr>
                     )
                 }

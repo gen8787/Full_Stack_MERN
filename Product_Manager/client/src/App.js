@@ -4,6 +4,8 @@ import { Router, Link, navigate } from '@reach/router';
 
 import CreateProduct from './components/CreateProduct';
 import AllProducts from './components/AllProducts';
+import OneProduct from './components/OneProduct';
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
     <Router>
       <CreateProduct path="/"/>
       <AllProducts path="/all"/>
+      <OneProduct path="/:id" />
     </Router>
     </div>
     </>

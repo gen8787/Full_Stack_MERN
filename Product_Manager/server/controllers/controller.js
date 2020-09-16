@@ -19,7 +19,7 @@ module.exports = {
     
     // http://localhost:8000/api/:id
     one: (req,res) => {
-        Product.find({ _id: req.params.id })
+        Product.findOne({ _id: req.params.id })
             .then(data => res.json(data))
             .catch(err => res.json(err));
     },
