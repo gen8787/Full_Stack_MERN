@@ -42,7 +42,7 @@ useEffect(() => {
                 if (res.data.errors) {
                     setErrors(res.data.errors)
                 } else {
-                    navigate('/')
+                    navigate('/all')
                 }
             })
             .catch(err => console.log(err))
@@ -56,7 +56,7 @@ useEffect(() => {
             <label htmlFor="title">Title:</label>
             <input onChange={changeHandler} name="title" type="text" value={product.title}/>
             {
-                errors.title ? <small>{errors.title.message}</small>
+                errors.title ? <small style={{color:'red'}}>{errors.title.message}</small>
                 : ""
             }
             </div>
@@ -65,7 +65,7 @@ useEffect(() => {
             <label htmlFor="price">Price:</label>
             <input onChange={changeHandler} name="price" type="text" value={product.price}/>
             {
-                errors.price ? <small>{errors.price.message}</small>
+                errors.price ? <small style={{color:'red'}}>{errors.price.message}</small>
                 : ""
             }
             </div>
@@ -74,7 +74,7 @@ useEffect(() => {
             <label htmlFor="description">Description:</label>
             <input onChange={changeHandler} name="description" type="text" value={product.description}/>
             {
-                errors.description ? <small>{errors.description.message}</small>
+                errors.description ? <small style={{color:'red'}}>{errors.description.message}</small>
                 : ""
             }
             </div>
