@@ -4,7 +4,7 @@ import { Link, navigate } from '@reach/router';
 
 const CreateProduct = () => {
 //==   S T A T E   ==||
-    const [product, setproduct] = useState({
+    const [product, setProduct] = useState({
         title: "",
         price: "",
         description: ""
@@ -31,7 +31,7 @@ const CreateProduct = () => {
     };
 
     const changeHandler = (e) => {
-        setproduct({
+        setProduct({
             ...product,
             [e.target.name]: e.target.value
         });
