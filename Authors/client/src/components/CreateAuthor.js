@@ -20,7 +20,7 @@ const submitHandler = (e) => {
             if (res.data.errors) {
                 setErrors(res.data.errors)
             } else {
-                navigate('/all')
+                navigate('/')
             }
         })
         .catch(err => console.log(err))

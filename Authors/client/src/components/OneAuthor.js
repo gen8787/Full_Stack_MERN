@@ -39,6 +39,13 @@ const OneAuthor = (props) => {
             :
                 <>
                 <h2>{oneAuthor.name}</h2>
+                <h3>Books:</h3>
+                {
+                    oneAuthor.books.map((book, i) =>
+                    <p key={i}>{book.title}</p>
+                    )
+                }
+                <p>{oneAuthor.books.title}</p>
                 <button onClick={ () => deleteHandler(oneAuthor._id)}>Delete Author</button>
                 <button onClick={() => updateHandler(oneAuthor._id)}>Edit</button>
                 </>
